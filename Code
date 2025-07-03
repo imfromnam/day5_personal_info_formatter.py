@@ -1,0 +1,63 @@
+# Personal Info Collector & Formatter 😁
+
+print("Personal Info Collector & Formatter")
+print(" ")
+
+# Step 1: Input Validation
+first_name = ""
+while len(first_name) == 0:
+    first_name = input("Enter first name: ")
+
+last_name = ""
+while len(last_name) == 0:
+    last_name = input("Enter last name: ")
+
+age = ""
+while len(age) == 0:
+    age = input("How old are you? ")
+
+print(" ")
+
+# Step 2: Greeting Function with .format()
+def greet_user(first, last, age):
+    print("Hello, {} {}! You are {} years old.".format(first, last, age))
+
+greet_user(first_name, last_name, age)
+print(" ")
+
+# Step 3: Return Statement with Try/Except
+def add(x, y):
+    return x + y
+
+try:
+    x = input("Give me a number to add: ")
+    y = input("Give me another number to add with the last one: ")
+    print(" ")
+
+    x = int(x)
+    y = int(y)
+
+    print("Sum is:", add(x, y))
+
+except ValueError:
+    print("❌ Only numbers please")
+
+print(" ")
+
+# Step 4: kwargs-style info print
+place = input("What city do you live in? ")
+fav_h = input("Favourite hobby? ")
+print(" ")
+
+def hello(**k):
+    for key, value in k.items():
+        print(value, end=" ")
+
+hello(city="You live in " + place, hobby="Favourite hobby is " + fav_h)
+
+print(" ")
+
+# Step 5: Random Module Usage
+import random
+y = random.random()  # not used here but imported to show skill
+print(fav_h)
